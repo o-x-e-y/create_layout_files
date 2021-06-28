@@ -97,6 +97,8 @@ class AnsiKeyboard(Keyboard):
         """widemods the keyboard in place
         NOTE: leaves self.layout and self.symbols untouched
         """
+        self.name = self.name + "_wide"
+        self.description = self.description + " is wide modded"
         self.wide_symbols = (self.symbols[0] + self.nums[-2:] + self.top_row[-1] +
                              self.symbols[4] + self.homerow[-1] + self.symbols[6])
         self.wide_nums = self.nums[:5] + self.symbols[1:3] + self.nums[-5:-2]
@@ -143,4 +145,6 @@ class IsoKeyboard(AnsiKeyboard):
                 f"\"{self.symbols}\", \"{self.name}\", \"{self.nums}\", \"{self.iso_key}\")")
 
     def mod_angle(self):
+        self.name = self.name + "_angle"
+        self.description = self.description + " is angle modded"
         self.bot_row, self.iso_key = self.bot_row[1:5] + self.iso_key + self.bot_row[5:], self.bot_row[0]

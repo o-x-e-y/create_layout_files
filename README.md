@@ -3,7 +3,8 @@ Create layout files more easily.
  
  To interface it, there are 3 keyboard classes: Keyboard, AnsiKeyboard and IsoKeyboard.
  
- Put these into any of the keyboard_to_xxx functions, and the function will generate a file of corresponding type.
+ Put these into any of the keyboard_to_xxx functions, and the function will generate a file of corresponding type. You can also
+do the reverse and generate a Keyboard object from a xxx_to_keyboard function.
  
  When I say Keyboard object, I mean either Keyboard, AnsiKeyboard or IsoKeyboard.
  
