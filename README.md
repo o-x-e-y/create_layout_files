@@ -1,5 +1,4 @@
-# create_layout_files
-Create layout files more easily.
+# Create layout files more easily.
  
  To interface it, there are 3 keyboard classes: Keyboard, AnsiKeyboard and IsoKeyboard.
  
@@ -27,9 +26,9 @@ do the reverse and generate a Keyboard object from a xxx_to_keyboard function.
  ## How to interface the functions:
  All 3 file types provide an xxx_to_keyboard and keyboard_to_xxx function that take slightly different arguments.
  
- klc_to_keyboard and kb_to_keyboard: takes a file name (both with and without extension works), and a Keyboard type. Also takes an optional directory though modifying this should not be necessary.
+ klc_to_keyboard and kb_to_keyboard: takes a file name (both with and without extension works), and a Keyboard type. Also takes an optional directory though modifying this should not be necessary. NOTE: kb_to_keyboard does not consider mods. Only klc does.
  
- json_to_keyboard: besides the other 2 arguments takse a boolean fill_unknowns, which determines what type to return if not all fields in the json file are filled. Defaults to True. If True, returns the type given, if False, returns the biggest between either what the json parameters can fill, or the type given.
+ json_to_keyboard: besides the other 2 arguments takse a boolean fill_unknowns, which determines what type to return if not all fields in the json file are filled. Defaults to True. If True, returns the type given, if False, returns the biggest between either what the json parameters can fill, or the type given. NOTE: does not consider mods.
  
  keyboard_to_klc: takes a Keyboard object, a language (like English, german, french), and optionally a region (default None), a has_symbols (default True, if false, defaults to "\`[]/=-\\" and an optional directory. Changing this shouldn't be necessary. Writes to a file corresponding to <Keyboard.name>.klc in the directory.
  
