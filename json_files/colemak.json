@@ -1,0 +1,11 @@
+{
+	"type": "IsoKeyboard",
+	"top_row": "qwfpgjluy;",
+	"homerow": "arstdhneio",
+	"bot_row": "zxcvbkm,./",
+	"name": "colemak",
+	"description": "OG colemak",
+	"nums": "1234567890",
+	"symbols": "`-=[]'\\",
+	"iso_key": "\\"
+}
