@@ -6,7 +6,7 @@ from keyboards import Keyboard, AnsiKeyboard, IsoKeyboard
 
 
 if __name__ == "__main__":
-    keyboard = IsoKeyboard(*keyboards.layouts["halmak"], keyboards.layout_symbols["halmak"])
-    keyboard.mod_wide()
+    keyboard = IsoKeyboard(*keyboards.layouts["dvorak"], keyboards.layout_symbols["dvorak"])
+    keyboard.mod_angle()
     print(keyboard)
     keyboard_to_json(keyboard)

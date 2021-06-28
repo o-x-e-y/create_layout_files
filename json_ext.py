@@ -24,8 +24,6 @@ def keyboard_to_json(keyboard: Keyboard, directory="json_files"):
     except AttributeError:
         pass
 
-    from pprint import pprint
-    pprint(json)
     with open(f"{directory}/{keyboard.name}.json", 'w', encoding='utf-8') as json_file:
         dump(dict(json), json_file, indent='\t', separators=(',', ': '))
 
