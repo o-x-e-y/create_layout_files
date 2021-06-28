@@ -19,6 +19,8 @@ do the reverse and generate a Keyboard object from a xxx_to_keyboard function.
  
  (UNFINISHED) Besides having a wide mod function, also provides an angle mod function that angle mods the keyboard in place.
  
+ Within the keyboards.py file there are also present arguments for a couple of layouts, see main.py for an example of how to use those.
+ 
  ## File types:
  KLC is the Microsoft Layout Creator file type, json is a Keyboard class type representation that might not have all parameters for all 3 classes and instead includes a type, and kb represents the bare minimum of a keyboard being the name and the 3\*10 matrix.
  
