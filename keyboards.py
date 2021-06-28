@@ -98,10 +98,11 @@ class AnsiKeyboard(Keyboard):
         NOTE: leaves self.layout and self.symbols untouched
         """
         self.name = self.name + "_wide"
-        self.description = self.description + " is wide modded"
+        self.description = self.description + " wide modded"
         self.wide_symbols = (self.symbols[0] + self.nums[-2:] + self.top_row[-1] +
                              self.symbols[4] + self.homerow[-1] + self.symbols[6])
         self.wide_nums = self.nums[:5] + self.symbols[1:3] + self.nums[-5:-2]
+        print(self.wide_nums)
         self.top_row = self.top_row[:5] + self.symbols[3] + self.top_row[-5:-1]
         self.homerow = self.homerow[:5] + self.symbols[5] + self.homerow[-5:-1]
         self.bot_row = self.bot_row[:5] + self.bot_row[-1] + self.bot_row[-5:-1]
@@ -135,7 +136,7 @@ class IsoKeyboard(AnsiKeyboard):
 
     def __str__(self):
         return (f"{self.name}:\n"
-                f"{self.wide_symbols[0]} {' '.join(self.nums)} {' '.join(self.wide_symbols[1:3])} BSP\n"
+                f"{self.wide_symbols[0]} {' '.join(self.wide_nums)} {' '.join(self.wide_symbols[1:3])} BSP\n"
                 f"TB {' '.join(self.top_row)} {' '.join(self.wide_symbols[3:5])} EN\n"
                 f"CPS {' '.join(self.homerow)} {' '.join(self.wide_symbols[5:])} N\n"
                 f"SF {self.iso_key} {' '.join(self.bot_row)} SHFT\n")
@@ -146,5 +147,5 @@ class IsoKeyboard(AnsiKeyboard):
 
     def mod_angle(self):
         self.name = self.name + "_angle"
-        self.description = self.description + " is angle modded"
+        self.description = self.description + " angle modded"
         self.bot_row, self.iso_key = self.bot_row[1:5] + self.iso_key + self.bot_row[5:], self.bot_row[0]
